@@ -1,0 +1,144 @@
+[
+  {
+    "task": "a1_three_primitives",
+    "sample": "a1_three_primitives-bad_react",
+    "score": 1,
+    "runs": true,
+    "behavior": "incorrect",
+    "idiomatic": true,
+    "evidence": {
+      "at_50_60": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "at_20_30": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "at_4_4": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "stable": true
+    }
+  },
+  {
+    "task": "a1_three_primitives",
+    "sample": "a1_three_primitives-good",
+    "score": 4,
+    "runs": true,
+    "behavior": "correct",
+    "idiomatic": true,
+    "evidence": {
+      "at_50_60": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "at_20_30": [
+        0,
+        0,
+        255,
+        255
+      ],
+      "at_4_4": [
+        0,
+        255,
+        0,
+        255
+      ],
+      "stable": true
+    }
+  },
+  {
+    "task": "b1_bouncing_ball",
+    "sample": "b1_bouncing_ball-bad_setinterval",
+    "score": 1,
+    "runs": true,
+    "behavior": "incorrect",
+    "idiomatic": false,
+    "evidence": {
+      "xRange": 183,
+      "yRange": 0,
+      "bounces": 0,
+      "teleports": 2,
+      "inBounds": true
+    }
+  },
+  {
+    "task": "b1_bouncing_ball",
+    "sample": "b1_bouncing_ball-good",
+    "score": 4,
+    "runs": true,
+    "behavior": "correct",
+    "idiomatic": true,
+    "evidence": {
+      "xRange": 192,
+      "yRange": 88,
+      "bounces": 2,
+      "teleports": 0,
+      "inBounds": true
+    }
+  },
+  {
+    "task": "d3_pushpop_isolation",
+    "sample": "d3_pushpop_isolation-bad_nopop",
+    "score": 1,
+    "runs": true,
+    "behavior": "incorrect",
+    "idiomatic": true,
+    "evidence": {
+      "barDiagonal": true,
+      "barNotHorizontal": true,
+      "squareCenter": false,
+      "squareCorner": false
+    }
+  },
+  {
+    "task": "d3_pushpop_isolation",
+    "sample": "d3_pushpop_isolation-good",
+    "score": 4,
+    "runs": true,
+    "behavior": "correct",
+    "idiomatic": true,
+    "evidence": {
+      "barDiagonal": true,
+      "barNotHorizontal": true,
+      "squareCenter": true,
+      "squareCorner": true
+    }
+  },
+  {
+    "task": "f2_runaway_state",
+    "sample": "f2_runaway_state-broken",
+    "score": 1,
+    "runs": true,
+    "behavior": "incorrect",
+    "idiomatic": true,
+    "evidence": {
+      "x1": 2,
+      "x2": 2,
+      "moved": false
+    }
+  },
+  {
+    "task": "f2_runaway_state",
+    "sample": "f2_runaway_state-fixed",
+    "score": 4,
+    "runs": true,
+    "behavior": "correct",
+    "idiomatic": true,
+    "evidence": {
+      "x1": 70,
+      "x2": 134,
+      "moved": true
+    }
+  }
+]

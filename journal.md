@@ -54,6 +54,40 @@ the actual question is whether acquired conceptual knowledge transfers.
 
 ---
 
+---
+
+## 2026-09-29
+
+### p5.js task suite and first execution harness
+
+the p5.js task suite now exists: 25 tasks across rendering, animation, interaction, transformation, composition, debugging, and generalization. every acceptance check is behavioral and runs headlessly (synthetic mouse/key events, frame sampling, pixel probes). no code reading.
+
+a first execution harness implements four of those tasks and was validated with synthetic sample outputs:
+
+```text
+a1_three_primitives   bad_react        1
+a1_three_primitives   good             4
+b1_bouncing_ball      bad_setinterval   1
+b1_bouncing_ball      good             4
+d3_pushpop_isolation  bad_nopop         1
+d3_pushpop_isolation  good             4
+f2_runaway_state      broken           1
+f2_runaway_state      fixed            4
+```
+
+the flawed samples are deliberate misconception probes and each failed for its intended reason:
+
+* fill() treated as a per-shape attribute (react mental model)
+* animation driven by setInterval with a wrap instead of a bounce
+* transform leak without push/pop dragging the second shape off-canvas
+* state update left in setup so nothing moves
+
+scoring has a fourth tier for idiomatic use: behaviorally correct code that drives its frame loop with timers caps at 3. a bouncing ball reimplemented with setInterval has not acquired the environment.
+
+a design decision the suite surfaced: tasks that display text have no behavioral check yet. reading rendered digits needs either a small digit classifier or a spec change. this is the current open harness question.
+
+the harness was developed against headless chromium with the libnspr4/libnss3 workaround documented in evaluation/p5js/harness/readme.md.
+
 ## open questions
 
 * how should source proficiency be measured?

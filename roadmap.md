@@ -63,7 +63,7 @@ the goal is to establish whether the hypothesis holds before building a polished
 
 ## phase 4 — execution
 
-* [ ] p5.js execution harness
+* [x] p5.js execution harness
 * [ ] three.js execution harness
 * [ ] kaboom.js execution harness
 * [ ] openscad execution harness

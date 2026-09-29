@@ -31,6 +31,13 @@ trainery/
 │
 ├── evaluation/
 │   ├── p5js/
+│   │   ├── task-suite.md
+│   │   └── harness/
+│   │       ├── readme.md
+│   │       ├── runner.js
+│   │       ├── tasks.js
+│   │       ├── samples/
+│   │       └── results.json
 │   ├── threejs/
 │   ├── kaboomjs/
 │   ├── openscad/
